@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/silverstreaming/static/css/main.5f361e03.chunk.css",
+    "main.js": "/silverstreaming/static/js/main.ce699b38.chunk.js",
+    "main.js.map": "/silverstreaming/static/js/main.ce699b38.chunk.js.map",
+    "runtime-main.js": "/silverstreaming/static/js/runtime-main.b73a4a18.js",
+    "runtime-main.js.map": "/silverstreaming/static/js/runtime-main.b73a4a18.js.map",
+    "static/js/2.184bcf9d.chunk.js": "/silverstreaming/static/js/2.184bcf9d.chunk.js",
+    "static/js/2.184bcf9d.chunk.js.map": "/silverstreaming/static/js/2.184bcf9d.chunk.js.map",
+    "index.html": "/silverstreaming/index.html",
+    "precache-manifest.bd3c6a11f0c39ead56d1c99df0e77a01.js": "/silverstreaming/precache-manifest.bd3c6a11f0c39ead56d1c99df0e77a01.js",
+    "service-worker.js": "/silverstreaming/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/silverstreaming/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.184bcf9d.chunk.js.LICENSE.txt": "/silverstreaming/static/js/2.184bcf9d.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/silverstreaming/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b73a4a18.js",
+    "static/js/2.184bcf9d.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.ce699b38.chunk.js"
+  ]
+}
