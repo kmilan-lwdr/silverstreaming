@@ -1,38 +1,92 @@
 .App {
+  /*text-align: center;*/
+  width:100%;
+  height:100%;
+}
+
+.container{
+  position: relative;
+   width: 540px;
+   height: 380px;
+   margin: 20px auto;
+   box-shadow: 0 0 15px #ccc;
+   transition-duration: .3s;
+}
+
+#send-box {
+  position: relative;
+  box-sizing: border-box;
+  width: 540px;
+  height: 175px;
+  padding-top: 10px;
+  padding-left: 10px;
+  overflow: hidden;
+}
+#send-box textarea {
+  display: block;
+  width: 100%;
+  height: 60%;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  font-family: arial;
+  border-top: 1px solid rgba(204,204,204,.5);
+  border-right: 1px solid rgba(204,204,204,.5);
+  border-bottom: 1px solid rgba(204,204,204,.5);
+  resize: none;
+}
+#send-box button {
+  width: 55px;
+  height: 24px;
+  border: 0;
+  outline: none;
+  font-size: 12px;
   text-align: center;
+  cursor: pointer;
+}
+#send-box button[name="send"] {
+  background-color: rgb(138, 145, 161);
+  border: 1px solid rgb(138, 145, 161);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn {
+  position: absolute;
+  bottom: 28px;
+  right: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#record-box {
+  position: relative;
+  box-sizing: border-box;
+  width: 540px;
+  height: 225px;
+  padding: 10px 10px 0 10px;
+  overflow-y:auto;
+  font-size: 12px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#record-box>div{
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+.text {
+  margin-left: 40px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.name {
+  margin-left: 40px;
+}
+#record-box span.name {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 10px;
+}
+#record-box span.say {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 80%;
+  padding: 5px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
 }

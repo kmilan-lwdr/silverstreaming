@@ -7,12 +7,23 @@ app.use(express.static(path.resolve(__dirname,'../public')))
 
 const io = require('socket.io')(server)
 
-let clients = []
+let clients = {}
 let students = []
+let onlineCount = 0;
 
 io.sockets.on('connection', (client) => {
     console.log('connecting...');
-    clients.push(client)
+
+    client.on('login', (obj) => {
+        client.id = obj.uid;
+        if (!clients.hasOwnProperty(obj.uid)){
+            clients.push(client)
+            clients[obj.uid] = obj.username;
+            onlineCount++;
+        }
+
+        io.emit('lohin', {clients:clients, onlineCount:onlineCount, user:obj})
+    })
 
     client.on('message', (params) => {
         switch(params.type){
@@ -30,7 +41,8 @@ io.sockets.on('connection', (client) => {
         }
     })
     client.on('disconnect', () => {
-        console.log(client.name, 'client exiting..');
+        
+        console.log(client.name, 'user exiting..');
         let index = students.findIndex(v=>v===client.name)
         students.splice(index, 1)
         io.sockets.emit('broadcast', {students})

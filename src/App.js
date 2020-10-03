@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
+
 const socket = require('socket.io-client')('http://localhost:3000')
 
 class App extends Component{
@@ -56,37 +58,24 @@ class App extends Component{
   }
 
   render(){
-    let {chatList,userName,addInfo,myclose,studentList,fclose} = this.state
+    let {chatList,addInfo} = this.state
     return (
       <div className="App">
         <header className="container">
         <div id="record-box" ref='record'>
           {
-            addInfo.map((v,index)=>{
-              return <div className='addInfo' key={index}>{v.time}   {v.txt}</div>
-            })
-          }
-          {
             chatList.map((v,index)=>{
-              if(v.user==userName){
-                  return <div className='right-div' key={index} ref='chatitem'>
-                            <em className='photo right-photo'></em><span className='name right-name'>{v.user} : </span><span className='say right-say'>{v.txt}</span>
-                       </div>                
-              }else{
-                  return <div className='left-div' key={index} ref='chatitem'>
-                            <em className='photo left-photo'></em><span className='name left-name'>{v.user} : </span><span className='say left-say'>{v.txt}</span>
-                       </div>
-              }
+              return <div className='left-div' key={index} ref='chatitem'>
+                        <span className='name'>{v.user} : </span><span className='text'>{v.txt}</span>
+                    </div>
             })           
           }
-          {myclose?<div className='addInfo'>exiting</div>:""}
-          {fclose?<div className='addInfo'>exiting</div>:""}
         </div>
         <div id="send-box">
-          <textarea rows="8" cols="80" ref='textbox'></textarea>
-            <div className="btn">
-              <button type="button" name="send" onClick={this.send.bind(this)}>Send</button>
-            </div>
+          <textarea rows="1" cols="80" ref='textbox'></textarea>
+          <div className="btn">
+            <button type="submit" name="send" onClick={this.send.bind(this)}>Send</button>
+          </div>
         </div>
 
         </header>
