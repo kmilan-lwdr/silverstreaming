@@ -5,9 +5,9 @@ const config = {
         "urls": "stun:stun.l.google.com:19302",
       },
       // { 
-      //   "urls": "turn:TURN_IP?transport=tcp",
-      //   "username": "TURN_USERNAME",
-      //   "credential": "TURN_CREDENTIALS"
+        // "urls": "turn:88.86.131.80?transport=tcp",
+        // "username": "TURN_USERNAME",
+        // "credential": "TURN_CREDENTIALS"
       // }
   ]
 };
@@ -61,6 +61,6 @@ window.onunload = window.onbeforeunload = () => {
 };
 
 function enableAudio() {
-  console.log("Enabling audio")
+  console.log("Enabling audio");
   video.muted = false;
 }

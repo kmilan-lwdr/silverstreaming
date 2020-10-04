@@ -5,9 +5,9 @@ const config = {
       "urls": "stun:stun.l.google.com:19302",
     },
     // { 
-    //   "urls": "turn:TURN_IP?transport=tcp",
-    //   "username": "TURN_USERNAME",
-    //   "credential": "TURN_CREDENTIALS"
+      // "urls": "turn:88.86.131.80?transport=tcp",
+      // "username": "TURN_USERNAME",
+      // "credential": "TURN_CREDENTIALS"
     // }
   ]
 };
@@ -56,6 +56,9 @@ window.onunload = window.onbeforeunload = () => {
 const videoElement = document.querySelector("video");
 const audioSelect = document.querySelector("select#audioSource");
 const videoSelect = document.querySelector("select#videoSource");
+const toggleMuteButton = document.querySelector("#toggleMuteButton");
+
+toggleMuteButton.addEventListener("click", toggleMute);
 
 audioSelect.onchange = getStream;
 videoSelect.onchange = getStream;
@@ -103,6 +106,7 @@ function getStream() {
 
 function gotStream(stream) {
   window.stream = stream;
+  
   audioSelect.selectedIndex = [...audioSelect.options].findIndex(
     option => option.text === stream.getAudioTracks()[0].label
   );
@@ -112,6 +116,12 @@ function gotStream(stream) {
   videoElement.srcObject = stream;
   socket.emit("broadcaster");
 }
+
+function toggleMute() {
+  console.log("Toggle audio");
+  Audio.muted = true;
+}
+
 
 function handleError(error) {
   console.error("Error: ", error);
