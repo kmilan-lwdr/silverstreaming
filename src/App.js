@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import ViewContainer from './Containers/ViewContainer';
+import BroadcastContainer from './Containers/BroadcastContainer';
 
 function App() {
+
+  const [viewerMode, setMode] = useState(true);
+
+  function handleClick(e) {
+    e.preventDefault();
+    setMode(!viewerMode);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {viewerMode}
+      {
+        viewerMode  ? (
+          <ViewContainer />
+        ) : (
+          <BroadcastContainer/>
+        )
+      }
+      <button onClick={handleClick}>Clicky</button>
     </div>
   );
 }
