@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/silverstreaming/static/css/main.d88cd79b.chunk.css",
-    "main.js": "/silverstreaming/static/js/main.979f7b51.chunk.js",
-    "main.js.map": "/silverstreaming/static/js/main.979f7b51.chunk.js.map",
+    "main.js": "/silverstreaming/static/js/main.e3f72e4c.chunk.js",
+    "main.js.map": "/silverstreaming/static/js/main.e3f72e4c.chunk.js.map",
     "runtime-main.js": "/silverstreaming/static/js/runtime-main.b73a4a18.js",
     "runtime-main.js.map": "/silverstreaming/static/js/runtime-main.b73a4a18.js.map",
     "static/js/2.ca052155.chunk.js": "/silverstreaming/static/js/2.ca052155.chunk.js",
     "static/js/2.ca052155.chunk.js.map": "/silverstreaming/static/js/2.ca052155.chunk.js.map",
     "index.html": "/silverstreaming/index.html",
-    "precache-manifest.03f3b97f35dbb4ba502156beca0501b2.js": "/silverstreaming/precache-manifest.03f3b97f35dbb4ba502156beca0501b2.js",
+    "precache-manifest.7f8ba8f2e0c3727a14a54a0b911e08da.js": "/silverstreaming/precache-manifest.7f8ba8f2e0c3727a14a54a0b911e08da.js",
     "service-worker.js": "/silverstreaming/service-worker.js",
     "static/css/main.d88cd79b.chunk.css.map": "/silverstreaming/static/css/main.d88cd79b.chunk.css.map",
     "static/js/2.ca052155.chunk.js.LICENSE.txt": "/silverstreaming/static/js/2.ca052155.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.b73a4a18.js",
     "static/js/2.ca052155.chunk.js",
     "static/css/main.d88cd79b.chunk.css",
-    "static/js/main.979f7b51.chunk.js"
+    "static/js/main.e3f72e4c.chunk.js"
   ]
 }

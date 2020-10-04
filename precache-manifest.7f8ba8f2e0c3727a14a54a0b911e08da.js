@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e410fcf8d826efa15aec5db20cb2cf56",
+    "revision": "fa90dee788730eca8df06b7ab56fb2bb",
     "url": "/silverstreaming/index.html"
   },
   {
-    "revision": "094236e433158ea3b8ab",
+    "revision": "f167773bb6497357e5e7",
     "url": "/silverstreaming/static/css/main.d88cd79b.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/silverstreaming/static/js/2.ca052155.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "094236e433158ea3b8ab",
-    "url": "/silverstreaming/static/js/main.979f7b51.chunk.js"
+    "revision": "f167773bb6497357e5e7",
+    "url": "/silverstreaming/static/js/main.e3f72e4c.chunk.js"
   },
   {
     "revision": "46081ff646ea648a9a44",
