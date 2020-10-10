@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
+import ChatContainer from './ChatContainer';
+import ParticipantsContainer from './ParticipantsContainer';
 import socketIOClient from "socket.io-client";
 const peerConnections = {};
 const config = {
@@ -21,7 +23,7 @@ export default function BroadcastContainer(props) {
     const videoElement = useRef();
     const socket = socketIOClient(window.location.origin);
 
-    useEffect(() => {
+    /*useEffect(() => {
         getStream()
             .then(getDevices)
             .then(gotDevices);
@@ -120,7 +122,7 @@ export default function BroadcastContainer(props) {
       
       function handleError(error) {
         console.error("Error: ", error);
-      }
+      }*/
 
     return (
         <div className="container">
@@ -129,17 +131,9 @@ export default function BroadcastContainer(props) {
                 autoPlay 
                 controls 
                 playsInline
-            />
-
-            <section className="select">
-
-                <select ref={audioSelect} onChange={getStream}></select>
-            </section>
-
-            <section className="select">
-
-                <select ref={videoSelect} onChange={getStream}></select>
-            </section>
+            />  
+            <ParticipantsContainer/>
+            <ChatContainer/>          
         </div>
     );
 }

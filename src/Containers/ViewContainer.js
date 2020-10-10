@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import ChatContainer from './ChatContainer';
 import socketIOClient from "socket.io-client";
 
 const config = {
@@ -18,7 +19,7 @@ export default function ViewContainer(props) {
     const [source, setSource] = useState("");
     let peerConnection;
 
-    useEffect(() => {
+    /*useEffect(() => {
         const socket = socketIOClient(window.location.origin);
         socket.on("offer", (id, description) => {
             peerConnection = new RTCPeerConnection(config);
@@ -61,7 +62,7 @@ export default function ViewContainer(props) {
 
           return () => socket.disconnect();
 
-    }, []);
+    }, []);*/
 
     return (
         <div className="container">
@@ -72,6 +73,7 @@ export default function ViewContainer(props) {
                 playsInline
                 src={source}
             />
+            <ChatContainer/>
         </div>
     );
 }
