@@ -11,10 +11,6 @@ const config = {
        }
   ]
 };
-// Get chat html elements
-const messageBox = document.querySelector('#messageBox');
-const sendButton = document.querySelector('#sendButton');
-const incomingMessages = document.querySelector('#incomingMessages');
 // Video elements
 const socket = io.connect(window.location.origin);
 const video = document.querySelector("video");
@@ -40,10 +36,6 @@ socket.on("offer", (id, description) => {
     }
   };
 });
-
-
-
-
 
 socket.on("candidate", (id, candidate) => {
   peerConnection
