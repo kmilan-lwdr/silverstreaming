@@ -24,7 +24,7 @@ export default function LandingContainer() {
     return (
       <div className="container">
           <div className="landingInputBox">
-            <div classname="tokenGenerator">
+            <div className="tokenGenerator">
                 <button onClick={generateToken}>Generate token</button>
             </div>
             <div className="input">
