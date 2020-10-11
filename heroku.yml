@@ -1,5 +1,0 @@
-build:
-  docker:
-    web: coturn/Dockerfile
-run:
-  web: docker run -d -p 3478:3478 -p 49152-65535:49152-65535/udp instrumentisto/coturn

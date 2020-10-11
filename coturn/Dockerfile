@@ -1,1 +1,0 @@
-FROM instrumentisto/coturn:latest
