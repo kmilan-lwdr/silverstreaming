@@ -4,14 +4,18 @@ const config = {
       { 
         "urls": "stun:stun.l.google.com:19302",
       },
-      // { 
-      //   "urls": "turn:TURN_IP?transport=tcp",
-      //   "username": "TURN_USERNAME",
-      //   "credential": "TURN_CREDENTIALS"
-      // }
+       { 
+         "urls": "turn:18.191.139.173:12779",
+         "username": "testuser",
+         "credential": "testpassword"
+       }
   ]
 };
-
+// Get chat html elements
+const messageBox = document.querySelector('#messageBox');
+const sendButton = document.querySelector('#sendButton');
+const incomingMessages = document.querySelector('#incomingMessages');
+// Video elements
 const socket = io.connect(window.location.origin);
 const video = document.querySelector("video");
 const enableAudioButton = document.querySelector("#enable-audio");
@@ -36,6 +40,9 @@ socket.on("offer", (id, description) => {
     }
   };
 });
+
+
+
 
 
 socket.on("candidate", (id, candidate) => {

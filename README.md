@@ -36,14 +36,17 @@ After that, you just need to visit localhost:4000 to connect to the server as a 
 
 ## Adding a TURN server
 
-A TURN server is used to relay traffic if a direct peer to peer connection fails and is required for most WebRTC application since a direct socket is often not possible between two clients that aren't on the same network. This repository doesn't include the usage of a TURN server by default, but you can add one by commenting in the turn configuration in the `broadcast.js` and `watch.js` file and filling in your TURN credentials.
+Install a linux-server. Allow traffic to the port you choose (in this case 12779). Install and configure coturn.
 
-There are several options on how you can create your own TURN server. Here are just two common ones:
+```
 
-- [Coturn](https://github.com/coturn/coturn)
-- [Golang WebRTC pion library TURN examples](https://github.com/pion/turn/tree/master/examples)
+sudo apt-get update
+sudo apt-get install coturn
+turnserver --listening-port 12779 --user testuser:testpassword --external-ip PUBLIC_CLOUD_IP/PRIVATE_CLOUD_IP --realm DOMAIN_OR_PUBLIC_IP --verbose
 
-You can also use TURN servers from cloud providers or other companies.
+```
+
+Configure your TURN credentials to broadcast.js and watch.js
 
 ## Authors
 
